@@ -39,7 +39,7 @@ shinyUI(fluidPage(
                 # Show a plot of the generated distribution
                 mainPanel(
                         
-                        showOutput("freenyPlot","NVD3"),
+                        showOutput("freenyPlot","nvd3"),
                         h5('Below he first 30 records of the freeny dataset for the columns Lag Quarterly Revenue and market potential dynamically updated'),
                         dataTableOutput('freenyTable')
                 )
