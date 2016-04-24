@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shiny Freeny dynamic update demo</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Shiny Freeny dynamic update demo">
+  <meta name="author" content="Filip Van Gool">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="./libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="./libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="./libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="./libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="./libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="./libraries/frameworks/io2012/js/slides" 
+    src="./libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Shiny Freeny dynamic update demo</h1>
+    <h2>Assignemnt Data Products MOOC</h2>
+    <p>Filip Van Gool<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Introduction</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Context</h3>
+
+<p>This Slidify Deck describes the demo Shiny application create by Filip Van Gool in the context of the Coursera course Data Prodocuts for the assignment &quot;Course Project: Shiny Application and Reproducible Pitch.&quot;</p>
+
+<h3>Demo Application</h3>
+
+<p>The demo Shiny application can be fond here:  <a href="https://metiomai.shinyapps.io/ShinyCourseraDataProduct/">link to Shiny application</a></p>
+
+<p>The &quot;server.R&quot; and &quot;ui.R&quot; R code can be found on Github on the links below</p>
+
+<ul>
+<li><a href="https://github.com/fvangool/Shiny-Application/blob/master/server.R">link to server.R</a></li>
+<li><a href="https://github.com/fvangool/Shiny-Application/blob/master/ui.R">link to ui.R</a></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Purpose</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The goal of the Shiny application was to illustrate the powerfull possiblities of dynamically updating graphs and data tables using Shiny.</p>
+
+<h3>Libraries used</h3>
+
+<p>For the demo application the following libraries were used:</p>
+
+<pre><code class="r">library(shiny)
+</code></pre>
+
+<pre><code class="r">library(rCharts)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Data Set used</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>We used the dataset &quot;freeny&quot; containing data on quarterly revenue and explanatory variables as it is a default dataset that comes with an R installation.</p>
+
+<p>As this is just a demo we just used the first 30 rows in the &quot;freeny dataset&quot; of just 2 columns, &quot;freeny$lag.quarterly.revenue&quot; and &quot;freeny$market.potential&quot;</p>
+
+<pre><code class="r">data &lt;- head(data.frame(freeny$lag.quarterly.revenue, freeny$market.potential),30)
+
+</code></pre>
+
+<p>The illustrate the power of the &quot;reactive&quot; function in R, we provide two input boxes the update the first row
+of the dataset used. Respectivly the values in the first row for: &#39;Lag Quarterly  Revenue&#39; and &#39;Market Potential&#39;.</p>
+
+<pre><code>##   freeny.lag.quarterly.revenue freeny.market.potential
+## 1                      8.79636                 12.9699
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Conclusion</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Using the &quot;reactive&quot; function in R this demonstrates the possibility dynamically update data in tables and plots based on user input.</p>
+
+<p>A further project would be to create entirely updatable data table and not only the first row.</p>
+
+<p>Note: We used rCharts as we were unfamiliar with the library and wanted to at least include it in the Shiny application to get a feeling of what it can.</p>
+
+<h4>Very curious about the projects you created for the assignment!</h4>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Introduction'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Purpose'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Data Set used'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Conclusion'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="./libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
